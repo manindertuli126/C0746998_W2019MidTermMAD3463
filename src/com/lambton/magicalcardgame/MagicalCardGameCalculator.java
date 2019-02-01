@@ -50,9 +50,20 @@ public class MagicalCardGameCalculator {
 
         }else if (firstShuffleColPos.contains("C")) {
             rowNumber = 2;
-            
+            tempArray[0][0]=cards1[0][1];
+            tempArray[0][1]=cards1[1][1];
+            tempArray[0][2]=cards1[2][1];
+
+            tempArray[1][0]=cards1[0][2];
+            tempArray[1][1]=cards1[1][2];
+            tempArray[1][2]=cards1[2][2];
+
+            tempArray[2][0]=cards1[0][0];
+            tempArray[2][1]=cards1[1][0];
+            tempArray[2][2]=cards1[2][0];
         }
-        return cards1;
+        magicalCardGameModel.setCardList(tempArray);
+        return tempArray;
     }
 
 //    public String[][] getSecShuffleResult(MagicalCardGameModel magicalCardGameModel){

@@ -23,8 +23,8 @@ public class MagicalCardGameMain{
         String FirstShuffleColPos = scanner. nextLine();
         System.out.println("Column selected: "+FirstShuffleColPos);
         magicalCardGameModel.setFirstShuffleColPos(FirstShuffleColPos);
-        MagicalCardGameCalculator magicalCardGameCalculator = new MagicalCardGameCalculator();
-//        magicalCardGameModel.setCardList()=;
+//        MagicalCardGameCalculator magicalCardGameCalculator = new MagicalCardGameCalculator();
+        cards=magicalCardGameModel.cardList;
         for (int i=0;i<cards.length;i++) {
             for (int j = 0; j < cards.length; j++) {
                 System.out.print(cards[i][j]);
