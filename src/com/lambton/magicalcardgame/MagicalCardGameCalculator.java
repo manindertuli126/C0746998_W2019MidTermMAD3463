@@ -10,9 +10,20 @@ public class MagicalCardGameCalculator {
         columnNumber = Integer.parseInt(firstShuffleColPos.substring(1,2));
         if(firstShuffleColPos.contains("A")){
             rowNumber =0;
-            for(int y=0; y<cards1.length;y++){
-                for (int u=0;u<cards1.length;u++){
-                    tempArray[y][u]=cards1[y+1][u+1];
+            tempArray[0][0]=cards1[0][1];
+            tempArray[0][1]=cards1[1][1];
+            tempArray[0][2]=cards1[2][1];
+
+            for (int w=0; w<cards1.length; w++) {
+                for (int y = 0; y < 1; y++) {
+                    for (int u = 0; u < cards1.length; u++) {
+                        tempArray[y][u] = cards1[y][u + 1];
+                    }
+                }
+                for (int y = 1; y < 2; y++) {
+                    for (int u = 0; u < cards1.length; u++) {
+                        tempArray[y][u] = cards1[y][u + 1];
+                    }
                 }
             }
         }else if (firstShuffleColPos.contains("B")){
